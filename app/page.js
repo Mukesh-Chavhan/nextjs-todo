@@ -16,7 +16,7 @@ settitle("")
 setdes("")
 };
 
-const DeleteHandler = (i)=> {
+const Delete = (i)=> {
   let copydata = [...mainTask]
   copydata.splice(i,1)
   setmainTask(copydata)
@@ -34,7 +34,7 @@ renderTask=mainTask.map((t,i)=>{
     </div>
     <button 
     onClick={()=>{
-      DeleteHandler(i)
+      Delete(i)
     }}
     className='  bg-red-400 text-white font-bold rounded px-2 py-2'>Delete</button>
   </li>
